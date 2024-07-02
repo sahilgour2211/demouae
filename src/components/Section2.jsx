@@ -22,9 +22,11 @@ const Section2 = () => {
           pt={"112px"}
           pb={"32px"}
           display={"flex"}
-          justifyContent={"space-between"}
+          justifyContent={{ xs: "space-around", sm: "space-between" }}
           alignItems={"center"}
           width={"100%"}
+          flexWrap={"wrap"}
+          gap={{ xs: 2, sm: 0 }}
         >
           <Box
             display={"flex"}
