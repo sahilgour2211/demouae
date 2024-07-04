@@ -17,6 +17,7 @@ import {
   Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 const navItems = ["Home", "Services", "About", "Contact Us"];
@@ -49,6 +50,17 @@ const Navbar = (props) => {
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
+
+  const navigate = useNavigate();
+
+  const handleNavigate = (item) => {
+    if (item === "Contact Us") {
+      navigate("/contact-us");
+    }
+    if (item === "Home") {
+      navigate("/");
+    }
+  };
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -91,6 +103,7 @@ const Navbar = (props) => {
                       fontWeight: 700,
                       fontSize: "18px",
                     }}
+                    onClick={() => handleNavigate(item)}
                   >
                     {item}
                   </Button>
