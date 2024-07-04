@@ -23,3 +23,14 @@
   font-family: mySixthFont;
   src: url("Fonts/Qanelas-Font-Family/ttf/QanelasSoft-Black.ttf");
 }
+
+/* swiper */
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: #d9d9d9 !important;
+  opacity: unset !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #e87421 !important;
+}
