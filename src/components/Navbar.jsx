@@ -53,7 +53,7 @@ const Navbar = (props) => {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ background: "#E3FEF7" }}>
+      <AppBar component="nav" sx={{ background: "#E3FEF7", height: "95px" }}>
         <Container>
           <Toolbar>
             <IconButton
