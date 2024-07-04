@@ -22,9 +22,8 @@ const Footer = () => {
               />
               <Typography color={"#135D66"} fontFamily={"myThirdFont"}>
                 Address:
-                <br /> Lorem Ipsum is simply dummy text of the
-                <br /> printing and typesetting industry. Lorem
-                <br /> Ipsum has been the industry's standard
+                <br /> Dubai Investment Park,
+                <br /> First Plot No.2970 -<br /> Dubai - U.A.E
               </Typography>
             </Box>
           </Grid>
@@ -47,13 +46,13 @@ const Footer = () => {
                   sx={{ display: "flex", alignItems: "center", gap: "12px" }}
                 >
                   <PhoneIcon sx={{ color: "#135D66" }} />
-                  <Typography color={"#135D66"}>12345678900</Typography>
+                  <Typography color={"#135D66"}>+971 56 244 4476</Typography>
                 </Box>
                 <Box
                   sx={{ display: "flex", alignItems: "center", gap: "12px" }}
                 >
                   <EmailIcon sx={{ color: "#135D66" }} />
-                  <Typography color={"#135D66"}>example@example.com</Typography>
+                  <Typography color={"#135D66"}>dsdemouae@gmail.com</Typography>
                 </Box>
               </Box>
               <Box

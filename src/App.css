@@ -34,3 +34,10 @@
 .swiper-pagination-bullet-active {
   background-color: #e87421 !important;
 }
+
+/* media - query */
+@media (max-width: 991px) {
+  .contactInput {
+    width: 100% !important;
+  }
+}
