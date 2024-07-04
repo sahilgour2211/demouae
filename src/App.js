@@ -14,7 +14,6 @@ function App() {
           <Route path={item.path} element={item.element} />
         ))}
       </Routes>
-
       <Footer />
     </>
   );

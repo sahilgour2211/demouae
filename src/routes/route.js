@@ -1,4 +1,5 @@
-import Home from "../pages/Home";
+import ContactUS from "../Pages/ContactUS";
+import Home from "../Pages/Home";
 
 export const routes = [
   {
@@ -7,6 +8,6 @@ export const routes = [
   },
   {
     path: "contact-us",
-    element: "contact",
+    element: <ContactUS />,
   },
 ];

@@ -27,8 +27,8 @@ const ContactUS = () => {
   };
 
   return (
-    <Box>
-      <Navbar />
+    <Box sx={{ marginTop: "95px" }}>
+      {/* <Navbar /> */}
       {/* top - image */}
       <Box
         sx={{
@@ -313,7 +313,7 @@ const ContactUS = () => {
           </Box>
         </Container>
       </Box>
-      <Footer />
+      {/* <Footer /> */}
     </Box>
   );
 };

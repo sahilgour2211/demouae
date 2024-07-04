@@ -54,11 +54,11 @@ const Navbar = (props) => {
   const navigate = useNavigate();
 
   const handleNavigate = (item) => {
-    if (item === "Contact Us") {
-      navigate("/contact-us");
-    }
     if (item === "Home") {
       navigate("/");
+    }
+    if (item === "Contact Us") {
+      navigate("/contact-us");
     }
   };
 
