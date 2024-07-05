@@ -43,6 +43,7 @@ const HeroSwiper = () => {
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 marginTop: "95px",
+                backgroundPosition: { xs: "bottom", md: "" },
               }}
             >
               <Container>
@@ -99,6 +100,7 @@ const HeroSwiper = () => {
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 marginTop: "95px",
+                backgroundPosition: { xs: "bottom", md: "" },
               }}
             >
               <Container>
@@ -155,6 +157,7 @@ const HeroSwiper = () => {
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 marginTop: "95px",
+                backgroundPosition: { xs: "bottom", md: "" },
               }}
             >
               <Container>

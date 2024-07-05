@@ -4,7 +4,7 @@ import React from "react";
 const AboutSection = () => {
   return (
     <>
-      <Box sx={{ marginTop: "108px" }}>
+      <Box sx={{ marginTop: { xs: "50px", sm: "108px" } }}>
         <Container>
           <Typography
             color={"#135D66"}
@@ -18,7 +18,12 @@ const AboutSection = () => {
           <Grid
             container
             columnSpacing={"48px"}
-            sx={{ display: "flex", alignItems: "center" }}
+            sx={{
+              padding: { xs: "16px", sm: "0" },
+              display: "flex",
+              alignItems: "center",
+              gap: { xs: "20px", md: "0" },
+            }}
           >
             <Grid item md={6}>
               <img width={"100%"} src="/images/about.png" alt="" />

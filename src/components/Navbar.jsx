@@ -30,27 +30,6 @@ const Navbar = (props) => {
     setMobileOpen((prevState) => !prevState);
   };
 
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }} fontWeight={"bold"}>
-        DEMOUAE
-      </Typography>
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
-
   const navigate = useNavigate();
 
   const handleNavigate = (item) => {
@@ -62,6 +41,32 @@ const Navbar = (props) => {
     }
   };
 
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+      <Typography variant="h6" sx={{ my: 2 }} fontWeight={"bold"}>
+        DEMOUAE
+      </Typography>
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemText
+                primary={item}
+                onClick={() => {
+                  handleNavigate(item);
+                }}
+              />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -72,9 +77,14 @@ const Navbar = (props) => {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" }, color: "#000" }}
+              sx={{
+                mr: 2,
+                display: { xs: "flex", sm: "none" },
+                color: "#000",
+                mt: 2.5,
+              }}
             >
-              <MenuIcon />
+              <MenuIcon fontSize="large" />
             </IconButton>
             <Box
               display={"flex"}

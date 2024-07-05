@@ -6,8 +6,11 @@ import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <Box sx={{ marginTop: "108px", background: "#E3FEF7" }}>
       <Container>
@@ -68,10 +71,24 @@ const Footer = () => {
                   <Typography sx={{ color: "#135D66", fontWeight: "700" }}>
                     Quick Links
                   </Typography>
-                  <Typography sx={{ color: "#135D66" }}>Home</Typography>
+                  <Typography
+                    sx={{ color: "#135D66" }}
+                    onClick={() => {
+                      navigate("/");
+                    }}
+                  >
+                    Home
+                  </Typography>
                   <Typography sx={{ color: "#135D66" }}>Services</Typography>
                   <Typography sx={{ color: "#135D66" }}>About</Typography>
-                  <Typography sx={{ color: "#135D66" }}>Contact US</Typography>
+                  <Typography
+                    sx={{ color: "#135D66" }}
+                    onClick={() => {
+                      navigate("/contact-us");
+                    }}
+                  >
+                    Contact US
+                  </Typography>
                 </Box>
                 <Box
                   sx={{ display: "flex", gap: "12px", alignItems: "center" }}

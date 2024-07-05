@@ -1,7 +1,17 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Container,
+  Grid,
+  IconButton,
+  Snackbar,
+  Typography,
+} from "@mui/material";
+import React, { useEffect, useState } from "react";
+import CloseIcon from "@mui/icons-material/Close";
+import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
 const ContactUS = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +22,13 @@ const ContactUS = () => {
     location: "",
     description: "",
   });
+  const [open, setOpen] = useState(false);
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,8 +40,57 @@ const ContactUS = () => {
 
   const handleSubmit = () => {
     console.log(formData);
-    // You can add your form submission logic here
+    const { companyName, yourName, number, email, location, description } =
+      formData;
+
+    if (
+      !companyName ||
+      !yourName ||
+      !number ||
+      !email ||
+      !location ||
+      !description
+    ) {
+      setMessage("All Fields Required");
+      setOpen(true);
+      return;
+    }
+    setLoading(true);
+    emailjs
+      .send("service_veaenbg", "template_efiv9ok", formData, {
+        publicKey: "4uaYNLAGKqcM_2oTt",
+      })
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setLoading(false);
+          setMessage("Form Submitted Successfully");
+          setOpen(true);
+          setFormData({
+            companyName: "",
+            yourName: "",
+            number: "",
+            email: "",
+            location: "",
+            description: "",
+          });
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          setLoading(false);
+          setMessage("Error");
+          setOpen(true);
+        }
+      );
   };
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [navigate]);
 
   return (
     <Box sx={{ marginTop: "95px" }}>
@@ -179,6 +245,11 @@ const ContactUS = () => {
           >
             GET IN TOUCH
           </Typography>
+          {loading && (
+            <Box top={"200%"} left={"47%"} position={"absolute"}>
+              <CircularProgress />
+            </Box>
+          )}
           <Box
             sx={{
               marginTop: "48px",
@@ -312,6 +383,29 @@ const ContactUS = () => {
             </Box>
           </Box>
         </Container>
+        <Snackbar
+          open={open}
+          autoHideDuration={3000}
+          onClose={handleClose}
+          message={message}
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+          sx={{
+            "& .MuiSnackbarContent-root": {
+              backgroundColor:
+                message === "Form Submitted Successfully" ? "green" : "red",
+            },
+          }}
+          action={
+            <IconButton
+              size="small"
+              aria-label="close"
+              color="inherit"
+              onClick={handleClose}
+            >
+              <CloseIcon fontSize="small" />
+            </IconButton>
+          }
+        />
       </Box>
       {/* <Footer /> */}
     </Box>
