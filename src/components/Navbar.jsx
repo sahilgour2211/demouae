@@ -18,9 +18,10 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 const drawerWidth = 240;
-const navItems = ["Home", "Services", "About", "Contact Us"];
+const navItems = ["Home", "Contact Us"];
 
 const Navbar = (props) => {
   const { window } = props;
@@ -43,9 +44,16 @@ const Navbar = (props) => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }} fontWeight={"bold"}>
-        DEMOUAE
-      </Typography>
+      <Box
+        display={"flex"}
+        flexGrow={1}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <img src="/images/logo.png" alt="" width={"82px"} height={"82px"} />
+      </Box>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -89,7 +97,10 @@ const Navbar = (props) => {
             <Box
               display={"flex"}
               flexGrow={1}
-              sx={{ display: { xs: "none", sm: "block" } }}
+              sx={{
+                display: { xs: "flex", sm: "none" },
+                justifyContent: { xs: "flex-end", sm: "flex-start" },
+              }}
             >
               <img
                 src="/images/logo.png"
@@ -98,26 +109,63 @@ const Navbar = (props) => {
                 height={"82px"}
               />
             </Box>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Box
+              display={"flex"}
+              justifyContent={"space-between"}
+              alignItems={"center"}
+              width={{ sm: "100%" }}
+            >
               <Box
                 display={"flex"}
-                justifyContent={"center"}
-                alignItems={"center"}
-                gap={"16px"}
+                sx={{ display: { xs: "none", sm: "block" } }}
               >
-                {navItems.map((item) => (
-                  <Button
-                    key={item}
-                    sx={{
-                      color: "#003C43",
-                      fontWeight: 700,
-                      fontSize: "18px",
-                    }}
-                    onClick={() => handleNavigate(item)}
-                  >
-                    {item}
-                  </Button>
-                ))}
+                <img
+                  src="/images/logo.png"
+                  alt=""
+                  width={"82px"}
+                  height={"82px"}
+                />
+              </Box>
+              <Box sx={{ display: { xs: "none", sm: "block" } }}>
+                <Box
+                  display={"flex"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  gap={"16px"}
+                  mt={2}
+                >
+                  {navItems.map((item) => (
+                    <Button
+                      key={item}
+                      sx={{
+                        color: "#003C43",
+                        fontWeight: 700,
+                        fontSize: "18px",
+                      }}
+                      onClick={() => handleNavigate(item)}
+                    >
+                      {item}
+                    </Button>
+                  ))}
+                </Box>
+              </Box>
+              <Box
+                mt={2}
+                sx={{
+                  display: { xs: "none", sm: "block" },
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: "#003C43",
+                    fontWeight: 700,
+                    fontSize: "18px",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <PhoneIcon /> <span>+971 56 244 4476</span>
+                </Typography>
               </Box>
             </Box>
           </Toolbar>
