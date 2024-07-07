@@ -29,7 +29,7 @@ const Section3 = () => {
             "linear-gradient(360deg, rgba(26,53,96,1) 0%, rgba(102,179,196,1) 80%)",
         }}
         pt={{ xs: "40px", sm: "90px" }}
-        pb={{ xs: "150px", sm: "195px" }}
+        pb={{ xs: "280px", sm: "195px" }}
         px={{ xs: "20px", sm: 0 }}
       >
         <Container>
@@ -68,10 +68,14 @@ const Section3 = () => {
                 fontWeight={400}
                 fontSize={"clamp(1.125rem, 0.9688rem + 0.5vw, 1.25rem)"}
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                At DS DEMOLITION, we stand out for our extensive industry
+                expertise and commitment to excellence. With a focus on safety,
+                efficiency, and environmental responsibility, we ensure each
+                demolition project is executed with precision and care. Our
+                dedication to sustainable practices and client satisfaction
+                guarantees reliable results that exceed expectations, making us
+                the trusted choice for preparing sites for new development with
+                confidence.
               </Typography>
             </Box>
           </Box>

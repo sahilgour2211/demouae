@@ -30,12 +30,14 @@ const AboutSection = () => {
             </Grid>
             <Grid item md={6}>
               <Typography>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.
+                Founded with a commitment to safety and precision, DS DEMOLITION
+                WORKS is a newly established leader in the demolition industry
+                in Dubai. Our passionate team combines innovative techniques
+                with a strong focus on environmental responsibility, ensuring
+                each project is executed with integrity and excellence.
+                Specializing in both residential and commercial demolition, DS
+                DEMOLITION WORKS delivers dependable service and strives for
+                outstanding results on every project.
               </Typography>
             </Grid>
           </Grid>

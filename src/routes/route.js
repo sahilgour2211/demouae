@@ -1,5 +1,5 @@
-import ContactUS from "../pages/ContactUS";
-import Home from "../pages/Home";
+import ContactUS from "../Pages/ContactUS";
+import Home from "../Pages/Home";
 
 export const routes = [
   {

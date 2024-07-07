@@ -69,11 +69,15 @@ const HeroSwiper = () => {
                     color={"#fff"}
                     fontFamily={"myThirdFont"}
                   >
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting
-                    <br /> industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever
-                    <br /> since the 1500s,
+                    we specialize in the expert dismantling, removal, and
+                    demolition
+                    <br /> of structures across Dubai. With a commitment to
+                    safety, efficiency,
+                    <br /> and environmental responsibility, our team utilizes
+                    advanced techniques
+                    <br /> including controlled explosives, mechanical
+                    demolition,
+                    <br /> and meticulous deconstruction.
                   </Typography>
                 </Box>
               </Container>
@@ -126,11 +130,15 @@ const HeroSwiper = () => {
                     color={"#fff"}
                     fontFamily={"myThirdFont"}
                   >
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting
-                    <br /> industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever
-                    <br /> since the 1500s,
+                    we specialize in the expert dismantling, removal, and
+                    demolition
+                    <br /> of structures across Dubai. With a commitment to
+                    safety, efficiency,
+                    <br /> and environmental responsibility, our team utilizes
+                    advanced techniques
+                    <br /> including controlled explosives, mechanical
+                    demolition,
+                    <br /> and meticulous deconstruction.
                   </Typography>
                 </Box>
               </Container>
@@ -183,11 +191,15 @@ const HeroSwiper = () => {
                     color={"#fff"}
                     fontFamily={"myThirdFont"}
                   >
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting
-                    <br /> industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever
-                    <br /> since the 1500s,
+                    we specialize in the expert dismantling, removal, and
+                    demolition
+                    <br /> of structures across Dubai. With a commitment to
+                    safety, efficiency,
+                    <br /> and environmental responsibility, our team utilizes
+                    advanced techniques
+                    <br /> including controlled explosives, mechanical
+                    demolition,
+                    <br /> and meticulous deconstruction.
                   </Typography>
                 </Box>
               </Container>

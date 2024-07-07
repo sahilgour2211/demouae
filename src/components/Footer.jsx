@@ -35,7 +35,7 @@ const Footer = () => {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                gap: "42px",
+                gap: "96px",
                 paddingTop: "32px",
               }}
             >
@@ -79,8 +79,8 @@ const Footer = () => {
                   >
                     Home
                   </Typography>
-                  <Typography sx={{ color: "#135D66" }}>Services</Typography>
-                  <Typography sx={{ color: "#135D66" }}>About</Typography>
+                  {/* <Typography sx={{ color: "#135D66" }}>Services</Typography>
+                  <Typography sx={{ color: "#135D66" }}>About</Typography> */}
                   <Typography
                     sx={{ color: "#135D66" }}
                     onClick={() => {
