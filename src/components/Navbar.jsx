@@ -103,7 +103,7 @@ const Navbar = (props) => {
               }}
             >
               <img
-                src="/images/logo.png"
+                src="/images/mainlogo.png"
                 alt=""
                 width={"82px"}
                 height={"82px"}
@@ -120,7 +120,7 @@ const Navbar = (props) => {
                 sx={{ display: { xs: "none", sm: "block" } }}
               >
                 <img
-                  src="/images/logo.png"
+                  src="/images/lg.png"
                   alt=""
                   width={"82px"}
                   height={"82px"}

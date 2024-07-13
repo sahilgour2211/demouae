@@ -17,12 +17,23 @@ const Footer = () => {
         <Grid container columnSpacing={"64px"} sx={{ paddingTop: "56px" }}>
           <Grid item md={6}>
             <Box sx={{ display: "flex", flexDirection: "column", gap: "64px" }}>
-              <img
-                style={{ maxWidth: "164px" }}
-                width={"100%"}
-                src="/images/logo.png"
-                alt=""
-              />
+              <Box
+                sx={{ display: "flex", flexDirection: "column", gap: "8px" }}
+              >
+                <img
+                  style={{ maxWidth: "164px" }}
+                  width={"100%"}
+                  src="/images/logo.png"
+                  alt=""
+                />
+                <Typography
+                  fontSize={"clamp(1rem, 0.9481rem + 0.2516vw, 1.25rem)"}
+                  fontWeight={600}
+                  color={"#003C43"}
+                >
+                  DS Wrecking &<br /> Demolition Works Co. L.L.C
+                </Typography>
+              </Box>
               <Typography color={"#135D66"} fontFamily={"myThirdFont"}>
                 Address:
                 <br /> Dubai Investment Park,

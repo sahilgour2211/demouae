@@ -19,7 +19,7 @@ const Section2 = () => {
     >
       <Container>
         <Box
-          pt={"112px"}
+          pt={"40px"}
           pb={"32px"}
           display={"flex"}
           justifyContent={{ xs: "space-around", sm: "space-between" }}

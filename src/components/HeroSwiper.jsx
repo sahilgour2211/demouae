@@ -51,8 +51,8 @@ const HeroSwiper = () => {
                   sx={{
                     display: "flex",
                     flexDirection: "column",
-                    paddingTop: "115px",
-                    gap: "48px",
+                    paddingTop: "100px",
+                    gap: "28px",
                   }}
                 >
                   <Typography
@@ -79,6 +79,36 @@ const HeroSwiper = () => {
                     demolition,
                     <br /> and meticulous deconstruction.
                   </Typography>
+                  <Box
+                    sx={{
+                      background: "#3c3c3c",
+                      maxWidth: "300px",
+                      width: "100%",
+                      padding: "16px",
+                      borderRadius: "8px",
+                      opacity: "90%",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    }}
+                  >
+                    <Typography
+                      color={"#E3FEF7"}
+                      fontFamily={"myThirdFont"}
+                      letterSpacing={"1px"}
+                    >
+                      Email:{" "}
+                      <span style={{ fontWeight: "600" }}>
+                        dsdemouae@gmail.com
+                      </span>
+                    </Typography>
+                    <Typography color={"#E3FEF7"}>
+                      Phone:{" "}
+                      <span style={{ fontWeight: "600" }}>
+                        +971 56 244 4476
+                      </span>
+                    </Typography>
+                  </Box>
                 </Box>
               </Container>
             </Box>
@@ -87,7 +117,7 @@ const HeroSwiper = () => {
         <SwiperSlide>
           <Box
             sx={{
-              backgroundImage: "url('/images/jcb.png')",
+              backgroundImage: "url('/images/slide2.png')",
               width: "100%",
               height: "615px",
               backgroundSize: "cover",
@@ -112,8 +142,8 @@ const HeroSwiper = () => {
                   sx={{
                     display: "flex",
                     flexDirection: "column",
-                    paddingTop: "115px",
-                    gap: "48px",
+                    paddingTop: "100px",
+                    gap: "28px",
                   }}
                 >
                   <Typography
@@ -140,6 +170,36 @@ const HeroSwiper = () => {
                     demolition,
                     <br /> and meticulous deconstruction.
                   </Typography>
+                  <Box
+                    sx={{
+                      background: "#3c3c3c",
+                      maxWidth: "300px",
+                      width: "100%",
+                      padding: "16px",
+                      borderRadius: "8px",
+                      opacity: "90%",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    }}
+                  >
+                    <Typography
+                      color={"#E3FEF7"}
+                      fontFamily={"myThirdFont"}
+                      letterSpacing={"1px"}
+                    >
+                      Email:{" "}
+                      <span style={{ fontWeight: "600" }}>
+                        dsdemouae@gmail.com
+                      </span>
+                    </Typography>
+                    <Typography color={"#E3FEF7"}>
+                      Phone:{" "}
+                      <span style={{ fontWeight: "600" }}>
+                        +971 56 244 4476
+                      </span>
+                    </Typography>
+                  </Box>
                 </Box>
               </Container>
             </Box>
@@ -148,7 +208,7 @@ const HeroSwiper = () => {
         <SwiperSlide>
           <Box
             sx={{
-              backgroundImage: "url('/images/jcb.png')",
+              backgroundImage: "url('/images/slide3.png')",
               width: "100%",
               height: "615px",
               backgroundSize: "cover",
@@ -173,8 +233,8 @@ const HeroSwiper = () => {
                   sx={{
                     display: "flex",
                     flexDirection: "column",
-                    paddingTop: "115px",
-                    gap: "48px",
+                    paddingTop: "100px",
+                    gap: "28px",
                   }}
                 >
                   <Typography
@@ -201,6 +261,36 @@ const HeroSwiper = () => {
                     demolition,
                     <br /> and meticulous deconstruction.
                   </Typography>
+                  <Box
+                    sx={{
+                      background: "#3c3c3c",
+                      maxWidth: "300px",
+                      width: "100%",
+                      padding: "16px",
+                      borderRadius: "8px",
+                      opacity: "90%",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    }}
+                  >
+                    <Typography
+                      color={"#E3FEF7"}
+                      fontFamily={"myThirdFont"}
+                      letterSpacing={"1px"}
+                    >
+                      Email:{" "}
+                      <span style={{ fontWeight: "600" }}>
+                        dsdemouae@gmail.com
+                      </span>
+                    </Typography>
+                    <Typography color={"#E3FEF7"}>
+                      Phone:{" "}
+                      <span style={{ fontWeight: "600" }}>
+                        +971 56 244 4476
+                      </span>
+                    </Typography>
+                  </Box>
                 </Box>
               </Container>
             </Box>
