@@ -12,7 +12,7 @@ const Footer = () => {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ marginTop: "108px", background: "#E3FEF7" }}>
+    <Box sx={{ marginTop: "108px", background: "#003c43" }}>
       <Container>
         <Grid container columnSpacing={"64px"} sx={{ paddingTop: "56px" }}>
           <Grid item md={6}>
@@ -29,12 +29,12 @@ const Footer = () => {
                 <Typography
                   fontSize={"clamp(1rem, 0.9481rem + 0.2516vw, 1.25rem)"}
                   fontWeight={600}
-                  color={"#003C43"}
+                  color={"#fff"}
                 >
                   DS Wrecking &<br /> Demolition Works Co. L.L.C
                 </Typography>
               </Box>
-              <Typography color={"#135D66"} fontFamily={"myThirdFont"}>
+              <Typography color={"#fff"} fontFamily={"myThirdFont"}>
                 Address:
                 <br /> Dubai Investment Park,
                 <br /> First Plot No.2970 -<br /> Dubai - U.A.E
@@ -53,20 +53,20 @@ const Footer = () => {
               <Box
                 sx={{ display: "flex", flexDirection: "column", gap: "12px" }}
               >
-                <Typography sx={{ color: "#135D66", fontWeight: "700" }}>
+                <Typography sx={{ color: "#fff", fontWeight: "700" }}>
                   Official Information
                 </Typography>
                 <Box
                   sx={{ display: "flex", alignItems: "center", gap: "12px" }}
                 >
-                  <PhoneIcon sx={{ color: "#135D66" }} />
-                  <Typography color={"#135D66"}>+971 56 244 4476</Typography>
+                  <PhoneIcon sx={{ color: "#fff" }} />
+                  <Typography color={"#fff"}>+971 56 244 4476</Typography>
                 </Box>
                 <Box
                   sx={{ display: "flex", alignItems: "center", gap: "12px" }}
                 >
-                  <EmailIcon sx={{ color: "#135D66" }} />
-                  <Typography color={"#135D66"}>dsdemouae@gmail.com</Typography>
+                  <EmailIcon sx={{ color: "#fff" }} />
+                  <Typography color={"#fff"}>dsdemouae@gmail.com</Typography>
                 </Box>
               </Box>
               <Box
@@ -79,11 +79,11 @@ const Footer = () => {
                 <Box
                   sx={{ display: "flex", flexDirection: "column", gap: "12px" }}
                 >
-                  <Typography sx={{ color: "#135D66", fontWeight: "700" }}>
+                  <Typography sx={{ color: "#fff", fontWeight: "700" }}>
                     Quick Links
                   </Typography>
                   <Typography
-                    sx={{ color: "#135D66" }}
+                    sx={{ color: "#fff" }}
                     onClick={() => {
                       navigate("/");
                     }}
@@ -93,7 +93,7 @@ const Footer = () => {
                   {/* <Typography sx={{ color: "#135D66" }}>Services</Typography>
                   <Typography sx={{ color: "#135D66" }}>About</Typography> */}
                   <Typography
-                    sx={{ color: "#135D66" }}
+                    sx={{ color: "#fff" }}
                     onClick={() => {
                       navigate("/contact-us");
                     }}
@@ -104,10 +104,10 @@ const Footer = () => {
                 <Box
                   sx={{ display: "flex", gap: "12px", alignItems: "center" }}
                 >
-                  <FacebookRoundedIcon sx={{ color: "#135D66" }} />
-                  <InstagramIcon sx={{ color: "#135D66" }} />
-                  <LinkedInIcon sx={{ color: "#135D66" }} />
-                  <XIcon sx={{ color: "#135D66" }} />
+                  <FacebookRoundedIcon sx={{ color: "#fff" }} />
+                  <InstagramIcon sx={{ color: "#fff" }} />
+                  <LinkedInIcon sx={{ color: "#fff" }} />
+                  <XIcon sx={{ color: "#fff" }} />
                 </Box>
               </Box>
             </Box>
@@ -116,7 +116,7 @@ const Footer = () => {
       </Container>
       <Divider sx={{ marginTop: "64px" }} />
       <Box sx={{ padding: "32px" }}>
-        <Typography color={"#77B0AA"} textAlign={"center"}>
+        <Typography color={"#fff"} textAlign={"center"}>
           © 2024 All Rights Reserved.
         </Typography>
       </Box>

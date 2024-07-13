@@ -78,7 +78,7 @@ const Navbar = (props) => {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ background: "#E3FEF7", height: "95px" }}>
+      <AppBar component="nav" sx={{ background: "#E3FEF7", height: "90px" }}>
         <Container>
           <Toolbar>
             <IconButton
@@ -103,10 +103,11 @@ const Navbar = (props) => {
               }}
             >
               <img
-                src="/images/mainlogo.png"
+                src="/images/lg.png"
                 alt=""
-                width={"82px"}
+                width={"170px"}
                 height={"82px"}
+                style={{ marginTop: "8px" }}
               />
             </Box>
             <Box
@@ -117,13 +118,15 @@ const Navbar = (props) => {
             >
               <Box
                 display={"flex"}
-                sx={{ display: { xs: "none", sm: "block" } }}
+                sx={{
+                  display: { xs: "none", sm: "block" },
+                }}
               >
                 <img
                   src="/images/lg.png"
                   alt=""
-                  width={"82px"}
                   height={"82px"}
+                  style={{ marginTop: "8px" }}
                 />
               </Box>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
