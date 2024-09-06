@@ -7,6 +7,7 @@ import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Hero from "../NewComponents/Hero";
 import AboutCompany from "../NewComponents/AboutCompany";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -18,6 +19,17 @@ const Home = () => {
   }, [navigate]);
   return (
     <>
+      <Helmet>
+        <title>Home</title>
+        <meta
+          name="description"
+          content="we specialize in the expert dismantling, removal, and
+                  demolition of structures across Dubai. With a commitment to
+                  safety, efficiency,
+                  and meticulous deconstruction."
+        />
+        <link rel="canonical" href="/" />
+      </Helmet>
       <Box>
         {/* <HeroSwiper /> */}
         <Hero />
