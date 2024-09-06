@@ -6,6 +6,7 @@ const clients = [
   "/images/client2.png",
   "/images/client3.png",
   "/images/client4.png",
+  "/images/client5.png",
 ];
 const AboutSection = () => {
   return (
@@ -14,7 +15,7 @@ const AboutSection = () => {
         <Container sx={{ display: "flex", justifyContent: "center" }}>
           <Box
             borderRadius={"30px"}
-            bgcolor={"#E3FEF7"}
+            // bgcolor={"#E3FEF7"}
             //   bgcolor={"#fff"}
             py={{ xs: "30px", sm: "50px" }}
             px={{ xs: "30px", sm: "128px" }}
@@ -24,7 +25,7 @@ const AboutSection = () => {
             <Typography
               textAlign={"center"}
               fontWeight={700}
-              color={"#1A3560"}
+              color={"#ff7e54"}
               fontSize={"clamp(1.125rem, 0.0313rem + 3.5vw, 2rem);"}
             >
               Major Clients

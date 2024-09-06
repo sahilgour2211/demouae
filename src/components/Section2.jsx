@@ -6,13 +6,13 @@ const Section2 = () => {
     <Box
       sx={{
         background: `
-         linear-gradient(rgba(232, 116, 33, 0.5), rgba(232, 116, 33, 0.5)),
+         linear-gradient(90deg, rgba(45,53,64,0.9) 0%, rgba(25,36,47,0.9) 100%),
         url('/images/section2.png')
       `,
         backgroundSize: "cover",
         backgroundPosition: "center",
         width: "100%",
-        minHeight: "282px",
+        minHeight: "272px",
         display: "flex",
         alignItems: "center",
       }}
@@ -22,7 +22,7 @@ const Section2 = () => {
           pt={"40px"}
           pb={"32px"}
           display={"flex"}
-          justifyContent={{ xs: "space-around", sm: "space-between" }}
+          justifyContent={{ xs: "space-around" }}
           alignItems={"center"}
           width={"100%"}
           flexWrap={"wrap"}
@@ -34,8 +34,8 @@ const Section2 = () => {
             gap={2}
             alignItems={"center"}
           >
-            <img width={"90px"} src="/images/smiley.png" alt="" />
-            <Typography textAlign={"center"} color={"#F7D2C4"} fontWeight={700}>
+            <img width={"60px"} src="/images/smiley.png" alt="" />
+            <Typography textAlign={"center"} color={"#FFF"} fontWeight={700}>
               250+ <br /> Happy Clients
             </Typography>
           </Box>
@@ -45,8 +45,8 @@ const Section2 = () => {
             gap={2}
             alignItems={"center"}
           >
-            <img width={"90px"} src="/images/bag.png" alt="" />
-            <Typography textAlign={"center"} color={"#F7D2C4"} fontWeight={700}>
+            <img width={"60px"} src="/images/bag.png" alt="" />
+            <Typography textAlign={"center"} color={"#FFF"} fontWeight={700}>
               300+ <br /> Completed Projects
             </Typography>
           </Box>
@@ -56,8 +56,8 @@ const Section2 = () => {
             gap={2}
             alignItems={"center"}
           >
-            <img width={"90px"} src="/images/news.png" alt="" />
-            <Typography textAlign={"center"} color={"#F7D2C4"} fontWeight={700}>
+            <img width={"60px"} src="/images/news.png" alt="" />
+            <Typography textAlign={"center"} color={"#FFF"} fontWeight={700}>
               130+ <br /> Government Authorities
             </Typography>
           </Box>

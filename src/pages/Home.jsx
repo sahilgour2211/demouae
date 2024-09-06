@@ -6,6 +6,7 @@ import AboutSection from "../components/AboutSection";
 import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Hero from "../NewComponents/Hero";
+import AboutCompany from "../NewComponents/AboutCompany";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -21,7 +22,8 @@ const Home = () => {
         {/* <HeroSwiper /> */}
         <Hero />
         <Section2 />
-        <Section3 />
+        {/* <Section3 /> */}
+        <AboutCompany />
         <AboutSection />
       </Box>
     </>
