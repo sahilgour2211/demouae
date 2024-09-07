@@ -1,4 +1,4 @@
-import ContactUS from "../pages/ContactUS";
+import ContactUs from "../NewComponents/ContactUs";
 import Home from "../pages/Home";
 
 export const routes = [
@@ -7,7 +7,7 @@ export const routes = [
     element: <Home />,
   },
   {
-    path: "contact-us",
-    element: <ContactUS />,
+    path: "contact",
+    element: <ContactUs />,
   },
 ];

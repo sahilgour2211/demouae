@@ -8,6 +8,9 @@ import { useNavigate } from "react-router-dom";
 import Hero from "../NewComponents/Hero";
 import AboutCompany from "../NewComponents/AboutCompany";
 import { Helmet } from "react-helmet-async";
+import Footer from "../NewComponents/Footer";
+import WhyChooseUs from "../NewComponents/WhyChooseUs";
+import OurServices from "../NewComponents/OurServices";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -34,8 +37,10 @@ const Home = () => {
         {/* <HeroSwiper /> */}
         <Hero />
         <Section2 />
+        <OurServices />
         {/* <Section3 /> */}
         <AboutCompany />
+        <WhyChooseUs />
         <AboutSection />
       </Box>
     </>
