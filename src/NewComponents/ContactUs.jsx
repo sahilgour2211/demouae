@@ -14,6 +14,7 @@ import React, { useEffect, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
