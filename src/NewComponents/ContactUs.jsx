@@ -94,226 +94,239 @@ const ContactUs = () => {
     });
   }, [navigate]);
   return (
-    <Box position={"relative"}>
-      {/* Contact Details Section */}
-      <img style={{ width: "100%" }} src="/images/cu.png" alt="" />
-      <Container>
-        <Box
-          sx={{
-            backgroundColor: "#FF7E54",
-            py: 4,
-            position: "absolute",
-            width: "90%",
-            top: { xs: "10%", sm: "18%" },
-          }}
-        >
-          <Container>
-            <Grid
-              container
-              spacing={2}
-              justifyContent="center"
-              alignItems="center"
-              textAlign="center"
-            >
-              <Grid item xs={12} md={4}>
-                <Email fontSize="large" sx={{ color: "#fff", mb: 1 }} />
-                <Typography color="#fff" fontWeight="bold">
-                  Email
-                </Typography>
-                <Typography color="#fff">dsdemouae@gmail.com</Typography>
-              </Grid>
-              <Grid item xs={12} md={4}>
-                <Phone fontSize="large" sx={{ color: "#fff", mb: 1 }} />
-                <Typography color="#fff" fontWeight="bold">
-                  Phone
-                </Typography>
-                <Typography color="#fff">+971 56 244 4476</Typography>
-              </Grid>
-              <Grid item xs={12} md={4}>
-                <LocationOn fontSize="large" sx={{ color: "#fff", mb: 1 }} />
-                <Typography color="#fff" fontWeight="bold">
-                  Location
-                </Typography>
-                <Typography color="#fff">
-                  Dubai Investment Park,
-                  <br /> First Plot No.2970 -<br /> Dubai - U.A.E
-                </Typography>
-              </Grid>
-            </Grid>
-          </Container>
-        </Box>
-      </Container>
-
-      {/* Contact Form Section */}
-      <Box marginTop={{ xs: "480px", sm: "120px" }} marginBottom={"160px"}>
-        <Container maxWidth="sm">
-          <Typography
-            variant="h5"
-            textAlign="center"
-            gutterBottom
-            sx={{ fontWeight: "bold", mb: 4, color: "#FF7E54" }}
-          >
-            Get In Touch
-          </Typography>
-          {loading && (
-            <Box top={"200%"} left={"47%"} position={"absolute"}>
-              <CircularProgress />
-            </Box>
-          )}
+    <>
+      <Helmet>
+        <title>Contact</title>
+        <meta
+          name="description"
+          content="Contact us for dismantling, removal, and
+                  demolition of structures across Dubai. With a commitment to
+                  safety, efficiency,
+                  and meticulous deconstruction."
+        />
+        <link rel="canonical" href="/contact" />
+      </Helmet>
+      <Box position={"relative"}>
+        {/* Contact Details Section */}
+        <img style={{ width: "100%" }} src="/images/cu.png" alt="" />
+        <Container>
           <Box
             sx={{
-              marginTop: "48px",
-              display: "flex",
-              flexDirection: "column",
-              gap: "20px",
-              alignItems: "center",
-              px: 2,
+              backgroundColor: "#FF7E54",
+              py: 4,
+              position: "absolute",
+              width: "90%",
+              top: { xs: "10%", sm: "18%" },
             }}
           >
-            <input
-              className="contactInput"
-              style={{
-                width: "460px",
-                borderRadius: "4px",
-                border: "1px solid #E87421A6",
-                outline: "none",
-                padding: "16px",
-                fontFamily: "mySecondFont",
-              }}
-              type="text"
-              placeholder="Company Name"
-              name="companyName"
-              value={formData.companyName}
-              onChange={handleChange}
-            />
-            <input
-              className="contactInput"
-              style={{
-                width: "460px",
-                borderRadius: "4px",
-                border: "1px solid #E87421A6",
-                outline: "none",
-                padding: "16px",
-                fontFamily: "mySecondFont",
-              }}
-              type="text"
-              placeholder="Your Name"
-              name="yourName"
-              value={formData.yourName}
-              onChange={handleChange}
-            />
-            <input
-              className="contactInput"
-              style={{
-                width: "460px",
-                borderRadius: "4px",
-                border: "1px solid #E87421A6",
-                outline: "none",
-                padding: "16px",
-                fontFamily: "mySecondFont",
-              }}
-              type="number"
-              placeholder="Number"
-              name="number"
-              value={formData.number}
-              onChange={handleChange}
-            />
-            <input
-              className="contactInput"
-              style={{
-                width: "460px",
-                borderRadius: "4px",
-                border: "1px solid #E87421A6",
-                outline: "none",
-                padding: "16px",
-                fontFamily: "mySecondFont",
-              }}
-              type="email"
-              placeholder="Email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-            />
-            <input
-              className="contactInput"
-              style={{
-                width: "460px",
-                borderRadius: "4px",
-                border: "1px solid #E87421A6",
-                outline: "none",
-                padding: "16px",
-                fontFamily: "mySecondFont",
-              }}
-              type="text"
-              placeholder="Location"
-              name="location"
-              value={formData.location}
-              onChange={handleChange}
-            />
-            <textarea
-              className="contactInput"
-              style={{
-                width: "460px",
-                borderRadius: "4px",
-                border: "1px solid #E87421A6",
-                outline: "none",
-                padding: "16px",
-                fontFamily: "mySecondFont",
-              }}
-              rows={6}
-              placeholder="Description"
-              name="description"
-              value={formData.description}
-              onChange={handleChange}
-            />
-            <Box
-              sx={{
-                marginTop: "20px",
-              }}
-            >
-              <Button
-                sx={{
-                  width: { md: "275px", xs: "160px" },
-                  background: "#E87421",
-                  color: "#fff",
-                  fontFamily: "mySecondFont",
-                  padding: "14px",
-                  ":hover": {
-                    background: "#E87421",
-                  },
-                }}
-                onClick={handleSubmit}
+            <Container>
+              <Grid
+                container
+                spacing={2}
+                justifyContent="center"
+                alignItems="center"
+                textAlign="center"
               >
-                SEND
-              </Button>
-            </Box>
+                <Grid item xs={12} md={4}>
+                  <Email fontSize="large" sx={{ color: "#fff", mb: 1 }} />
+                  <Typography color="#fff" fontWeight="bold">
+                    Email
+                  </Typography>
+                  <Typography color="#fff">dsdemouae@gmail.com</Typography>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                  <Phone fontSize="large" sx={{ color: "#fff", mb: 1 }} />
+                  <Typography color="#fff" fontWeight="bold">
+                    Phone
+                  </Typography>
+                  <Typography color="#fff">+971 56 244 4476</Typography>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                  <LocationOn fontSize="large" sx={{ color: "#fff", mb: 1 }} />
+                  <Typography color="#fff" fontWeight="bold">
+                    Location
+                  </Typography>
+                  <Typography color="#fff">
+                    Dubai Investment Park,
+                    <br /> First Plot No.2970 -<br /> Dubai - U.A.E
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Container>
           </Box>
         </Container>
-        <Snackbar
-          open={open}
-          autoHideDuration={3000}
-          onClose={handleClose}
-          message={message}
-          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-          sx={{
-            "& .MuiSnackbarContent-root": {
-              backgroundColor:
-                message === "Form Submitted Successfully" ? "green" : "red",
-            },
-          }}
-          action={
-            <IconButton
-              size="small"
-              aria-label="close"
-              color="inherit"
-              onClick={handleClose}
+
+        {/* Contact Form Section */}
+        <Box marginTop={{ xs: "480px", sm: "120px" }} marginBottom={"160px"}>
+          <Container maxWidth="sm">
+            <Typography
+              variant="h5"
+              textAlign="center"
+              gutterBottom
+              sx={{ fontWeight: "bold", mb: 4, color: "#FF7E54" }}
             >
-              <CloseIcon fontSize="small" />
-            </IconButton>
-          }
-        />
+              Get In Touch
+            </Typography>
+            {loading && (
+              <Box top={"200%"} left={"47%"} position={"absolute"}>
+                <CircularProgress />
+              </Box>
+            )}
+            <Box
+              sx={{
+                marginTop: "48px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px",
+                alignItems: "center",
+                px: 2,
+              }}
+            >
+              <input
+                className="contactInput"
+                style={{
+                  width: "460px",
+                  borderRadius: "4px",
+                  border: "1px solid #E87421A6",
+                  outline: "none",
+                  padding: "16px",
+                  fontFamily: "mySecondFont",
+                }}
+                type="text"
+                placeholder="Company Name"
+                name="companyName"
+                value={formData.companyName}
+                onChange={handleChange}
+              />
+              <input
+                className="contactInput"
+                style={{
+                  width: "460px",
+                  borderRadius: "4px",
+                  border: "1px solid #E87421A6",
+                  outline: "none",
+                  padding: "16px",
+                  fontFamily: "mySecondFont",
+                }}
+                type="text"
+                placeholder="Your Name"
+                name="yourName"
+                value={formData.yourName}
+                onChange={handleChange}
+              />
+              <input
+                className="contactInput"
+                style={{
+                  width: "460px",
+                  borderRadius: "4px",
+                  border: "1px solid #E87421A6",
+                  outline: "none",
+                  padding: "16px",
+                  fontFamily: "mySecondFont",
+                }}
+                type="number"
+                placeholder="Number"
+                name="number"
+                value={formData.number}
+                onChange={handleChange}
+              />
+              <input
+                className="contactInput"
+                style={{
+                  width: "460px",
+                  borderRadius: "4px",
+                  border: "1px solid #E87421A6",
+                  outline: "none",
+                  padding: "16px",
+                  fontFamily: "mySecondFont",
+                }}
+                type="email"
+                placeholder="Email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              <input
+                className="contactInput"
+                style={{
+                  width: "460px",
+                  borderRadius: "4px",
+                  border: "1px solid #E87421A6",
+                  outline: "none",
+                  padding: "16px",
+                  fontFamily: "mySecondFont",
+                }}
+                type="text"
+                placeholder="Location"
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
+              />
+              <textarea
+                className="contactInput"
+                style={{
+                  width: "460px",
+                  borderRadius: "4px",
+                  border: "1px solid #E87421A6",
+                  outline: "none",
+                  padding: "16px",
+                  fontFamily: "mySecondFont",
+                }}
+                rows={6}
+                placeholder="Description"
+                name="description"
+                value={formData.description}
+                onChange={handleChange}
+              />
+              <Box
+                sx={{
+                  marginTop: "20px",
+                }}
+              >
+                <Button
+                  sx={{
+                    width: { md: "275px", xs: "160px" },
+                    background: "#E87421",
+                    color: "#fff",
+                    fontFamily: "mySecondFont",
+                    padding: "14px",
+                    ":hover": {
+                      background: "#E87421",
+                    },
+                  }}
+                  onClick={handleSubmit}
+                >
+                  SEND
+                </Button>
+              </Box>
+            </Box>
+          </Container>
+          <Snackbar
+            open={open}
+            autoHideDuration={3000}
+            onClose={handleClose}
+            message={message}
+            anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+            sx={{
+              "& .MuiSnackbarContent-root": {
+                backgroundColor:
+                  message === "Form Submitted Successfully" ? "green" : "red",
+              },
+            }}
+            action={
+              <IconButton
+                size="small"
+                aria-label="close"
+                color="inherit"
+                onClick={handleClose}
+              >
+                <CloseIcon fontSize="small" />
+              </IconButton>
+            }
+          />
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 };
 
