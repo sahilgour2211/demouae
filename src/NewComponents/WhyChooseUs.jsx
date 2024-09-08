@@ -3,34 +3,52 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <Box sx={{ mt: "120px" }}>
+    <Box sx={{ py: "80px", bgcolor: "#EFECEC" }}>
       <Container>
-        <Grid container>
+        <Typography
+          fontFamily={"mySecondFont"}
+          textAlign={"center"}
+          fontWeight={700}
+          color={"#ff7e54"}
+          fontSize={"clamp(1.125rem, 0.0313rem + 3.5vw, 2rem);"}
+        >
+          Why Choose Us
+        </Typography>
+        <Grid
+          container
+          sx={{
+            padding: { xs: "16px", sm: "0" },
+            display: "flex",
+            gap: { xs: "20px", md: "0" },
+            mt: { xs: 2, md: 4 },
+          }}
+        >
           <Grid item md={5}>
             <Box
-              sx={{ position: "relative", maxWidth: "372px", width: "100%" }}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                position: "relative",
+              }}
             >
-              {/* Background Overlay */}
               <Box
                 sx={{
+                  backgroundColor: "red",
                   position: "absolute",
-                  top: "15px", // Adjust this value for the desired offset
-                  right: "15px", // Adjust this value for the desired offset
-                  width: "100%",
-                  height: "100%",
-                  backgroundColor: "#FF7E54", // Your desired orange color
-                  zIndex: 1,
+                  left: "5%", // Offset from the left
+                  bottom: "-5%", // Offset from the bottom
+                  width: "80%", // Full width relative to its container
+                  height: "100%", // Full height relative to its container
+                  zIndex: 1, // Ensure it stays behind the image
                 }}
               />
-              {/* Main Image */}
-              <Box
-                component="img"
+              <img
+                width={"80%"}
                 src="/images/choose.png"
-                alt=""
-                sx={{
+                alt="Demolished Building"
+                loading="lazy"
+                style={{
                   position: "relative",
-                  maxWidth: "372px",
-                  width: "100%",
                   zIndex: 2,
                 }}
               />
@@ -38,13 +56,6 @@ const WhyChooseUs = () => {
           </Grid>
           <Grid item md={7}>
             <Box sx={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-              <Typography
-                fontFamily={"mySecondFont"}
-                fontSize={"clamp(1.25rem, 1.0943rem + 0.7547vw, 2rem)"}
-                color={"#FF7E54"}
-              >
-                Why Choose Us
-              </Typography>
               <Typography
                 fontFamily={"mySecondFont"}
                 fontSize={"clamp(2rem, 1.7925rem + 1.0063vw, 3rem)"}

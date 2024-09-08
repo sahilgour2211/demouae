@@ -43,6 +43,7 @@ const OurServices = () => {
               {/* Image Container */}
               <Box width="100%" height="360px">
                 <img
+                  loading="lazy"
                   src="/images/PE.png"
                   alt="Service Image"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -103,6 +104,7 @@ const OurServices = () => {
               {/* Image Container */}
               <Box width="100%" height="360px">
                 <img
+                  loading="lazy"
                   src="/images/DW.png"
                   alt="Service Image"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -163,6 +165,7 @@ const OurServices = () => {
               {/* Image Container */}
               <Box width="100%" height="360px">
                 <img
+                  loading="lazy"
                   src="/images/CD.jpg"
                   alt="Service Image"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}

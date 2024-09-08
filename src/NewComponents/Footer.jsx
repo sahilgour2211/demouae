@@ -8,8 +8,10 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <Box sx={{ backgroundColor: "#18212E", mt: 3 }}>
       <Container>
@@ -38,9 +40,18 @@ const Footer = () => {
                 QUICK LINKS
               </Typography>
               <Box display="flex" flexDirection="column" gap={1}>
-                {["Home", "Contact Us"].map((link) => (
-                  <Typography key={link} color="#fff">
-                    {link}
+                {[
+                  { name: "Home", path: "/" },
+                  { name: "Contact Us", path: "/contact" },
+                ].map((link) => (
+                  <Typography
+                    onClick={() => {
+                      navigate(link.path);
+                    }}
+                    key={link.name}
+                    color="#fff"
+                  >
+                    {link.name}
                   </Typography>
                 ))}
               </Box>

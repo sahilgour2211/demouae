@@ -50,6 +50,9 @@ const Header = () => {
         </Box>
         <Box pl={3} mt={3}>
           <Button
+            onClick={() => {
+              navigate("/contact");
+            }}
             sx={{
               borderRadius: "0px",
               fontWeight: 600,
@@ -121,7 +124,7 @@ const Header = () => {
 
       <Container>
         <Box
-          py={"8px"}
+          // py={"8px"}
           display={"flex"}
           justifyContent={"space-between"}
           alignItems={"center"}
@@ -168,6 +171,9 @@ const Header = () => {
           </Box>
           <Box display={{ xs: "none", md: "flex" }}>
             <Button
+              onClick={() => {
+                navigate("/contact");
+              }}
               sx={{
                 borderRadius: "0px",
                 fontWeight: 600,

@@ -5,7 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
+import { useNavigate } from "react-router-dom";
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <Box>
       <Swiper
@@ -104,6 +106,9 @@ const Hero = () => {
                   </Button>
 
                   <Button
+                    onClick={() => {
+                      navigate("/contact");
+                    }}
                     sx={{
                       fontWeight: 600,
                       minWidth: 180,
@@ -210,6 +215,9 @@ const Hero = () => {
                   </Button>
 
                   <Button
+                    onClick={() => {
+                      navigate("/contact");
+                    }}
                     sx={{
                       fontWeight: 600,
                       minWidth: 180,
@@ -316,6 +324,9 @@ const Hero = () => {
                   </Button>
 
                   <Button
+                    onClick={() => {
+                      navigate("/contact");
+                    }}
                     sx={{
                       fontWeight: 600,
                       minWidth: 180,
@@ -423,6 +434,9 @@ const Hero = () => {
                   </Button>
 
                   <Button
+                    onClick={() => {
+                      navigate("/contact");
+                    }}
                     sx={{
                       fontWeight: 600,
                       minWidth: 180,

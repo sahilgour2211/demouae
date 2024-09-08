@@ -95,7 +95,7 @@ const Footer = () => {
                   <Typography
                     sx={{ color: "#fff" }}
                     onClick={() => {
-                      navigate("/contact-us");
+                      navigate("/contact");
                     }}
                   >
                     Contact US

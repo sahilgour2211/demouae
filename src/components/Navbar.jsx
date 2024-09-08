@@ -39,7 +39,7 @@ const Navbar = (props) => {
       navigate("/");
     }
     if (item === "Contact Us") {
-      navigate("/contact-us");
+      navigate("/contact");
     }
   };
 

@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Container,
@@ -6,16 +5,108 @@ import {
   Typography,
   TextField,
   Button,
+  Snackbar,
+  CircularProgress,
+  IconButton,
 } from "@mui/material";
 import { Email, Phone, LocationOn } from "@mui/icons-material";
+import React, { useEffect, useState } from "react";
+import CloseIcon from "@mui/icons-material/Close";
+import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    companyName: "",
+    yourName: "",
+    number: "",
+    email: "",
+    location: "",
+    description: "",
+  });
+  const [open, setOpen] = useState(false);
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = () => {
+    console.log(formData);
+    const { companyName, yourName, number, email, location, description } =
+      formData;
+
+    if (
+      !companyName ||
+      !yourName ||
+      !number ||
+      !email ||
+      !location ||
+      !description
+    ) {
+      setMessage("All Fields Required");
+      setOpen(true);
+      return;
+    }
+    setLoading(true);
+    emailjs
+      .send("service_veaenbg", "template_efiv9ok", formData, {
+        publicKey: "4uaYNLAGKqcM_2oTt",
+      })
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setLoading(false);
+          setMessage("Form Submitted Successfully");
+          setOpen(true);
+          setFormData({
+            companyName: "",
+            yourName: "",
+            number: "",
+            email: "",
+            location: "",
+            description: "",
+          });
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          setLoading(false);
+          setMessage("Error");
+          setOpen(true);
+        }
+      );
+  };
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [navigate]);
   return (
-    <Box>
+    <Box position={"relative"}>
       {/* Contact Details Section */}
       <img style={{ width: "100%" }} src="/images/cu.png" alt="" />
       <Container>
-        <Box sx={{ backgroundColor: "#FF7E54", py: 4 }}>
+        <Box
+          sx={{
+            backgroundColor: "#FF7E54",
+            py: 4,
+            position: "absolute",
+            width: "90%",
+            top: { xs: "10%", sm: "18%" },
+          }}
+        >
           <Container>
             <Grid
               container
@@ -54,7 +145,7 @@ const ContactUs = () => {
       </Container>
 
       {/* Contact Form Section */}
-      <Box marginTop={"100px"} marginBottom={"160px"}>
+      <Box marginTop={{ xs: "480px", sm: "120px" }} marginBottom={"160px"}>
         <Container maxWidth="sm">
           <Typography
             variant="h5"
@@ -64,48 +155,163 @@ const ContactUs = () => {
           >
             Get In Touch
           </Typography>
-          <form>
-            <Box mb={2}>
-              <TextField
-                fullWidth
-                label="Name"
-                variant="outlined"
-                sx={{ mb: 2 }}
-              />
-              <TextField
-                fullWidth
-                label="Email"
-                variant="outlined"
-                sx={{ mb: 2 }}
-              />
-              <TextField
-                fullWidth
-                label="Comment"
-                variant="outlined"
-                multiline
-                rows={4}
-              />
+          {loading && (
+            <Box top={"200%"} left={"47%"} position={"absolute"}>
+              <CircularProgress />
             </Box>
-            <Box textAlign="center">
+          )}
+          <Box
+            sx={{
+              marginTop: "48px",
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
+              alignItems: "center",
+              px: 2,
+            }}
+          >
+            <input
+              className="contactInput"
+              style={{
+                width: "460px",
+                borderRadius: "4px",
+                border: "1px solid #E87421A6",
+                outline: "none",
+                padding: "16px",
+                fontFamily: "mySecondFont",
+              }}
+              type="text"
+              placeholder="Company Name"
+              name="companyName"
+              value={formData.companyName}
+              onChange={handleChange}
+            />
+            <input
+              className="contactInput"
+              style={{
+                width: "460px",
+                borderRadius: "4px",
+                border: "1px solid #E87421A6",
+                outline: "none",
+                padding: "16px",
+                fontFamily: "mySecondFont",
+              }}
+              type="text"
+              placeholder="Your Name"
+              name="yourName"
+              value={formData.yourName}
+              onChange={handleChange}
+            />
+            <input
+              className="contactInput"
+              style={{
+                width: "460px",
+                borderRadius: "4px",
+                border: "1px solid #E87421A6",
+                outline: "none",
+                padding: "16px",
+                fontFamily: "mySecondFont",
+              }}
+              type="number"
+              placeholder="Number"
+              name="number"
+              value={formData.number}
+              onChange={handleChange}
+            />
+            <input
+              className="contactInput"
+              style={{
+                width: "460px",
+                borderRadius: "4px",
+                border: "1px solid #E87421A6",
+                outline: "none",
+                padding: "16px",
+                fontFamily: "mySecondFont",
+              }}
+              type="email"
+              placeholder="Email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <input
+              className="contactInput"
+              style={{
+                width: "460px",
+                borderRadius: "4px",
+                border: "1px solid #E87421A6",
+                outline: "none",
+                padding: "16px",
+                fontFamily: "mySecondFont",
+              }}
+              type="text"
+              placeholder="Location"
+              name="location"
+              value={formData.location}
+              onChange={handleChange}
+            />
+            <textarea
+              className="contactInput"
+              style={{
+                width: "460px",
+                borderRadius: "4px",
+                border: "1px solid #E87421A6",
+                outline: "none",
+                padding: "16px",
+                fontFamily: "mySecondFont",
+              }}
+              rows={6}
+              placeholder="Description"
+              name="description"
+              value={formData.description}
+              onChange={handleChange}
+            />
+            <Box
+              sx={{
+                marginTop: "20px",
+              }}
+            >
               <Button
                 sx={{
-                  marginTop: "42px",
-                  backgroundColor: "#FF7E54",
+                  width: { md: "275px", xs: "160px" },
+                  background: "#E87421",
                   color: "#fff",
-                  width: "100%",
-                  height: "50px",
-                  maxWidth: "250px",
                   fontFamily: "mySecondFont",
+                  padding: "14px",
                   ":hover": {
-                    backgroundColor: "#FF7E54",
+                    background: "#E87421",
                   },
                 }}
+                onClick={handleSubmit}
               >
-                Send
+                SEND
               </Button>
             </Box>
-          </form>
+          </Box>
         </Container>
+        <Snackbar
+          open={open}
+          autoHideDuration={3000}
+          onClose={handleClose}
+          message={message}
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+          sx={{
+            "& .MuiSnackbarContent-root": {
+              backgroundColor:
+                message === "Form Submitted Successfully" ? "green" : "red",
+            },
+          }}
+          action={
+            <IconButton
+              size="small"
+              aria-label="close"
+              color="inherit"
+              onClick={handleClose}
+            >
+              <CloseIcon fontSize="small" />
+            </IconButton>
+          }
+        />
       </Box>
     </Box>
   );

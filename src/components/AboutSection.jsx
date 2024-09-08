@@ -11,7 +11,7 @@ const clients = [
 const AboutSection = () => {
   return (
     <>
-      <Box sx={{ marginTop: { xs: "50px", sm: "108px" } }}>
+      <Box sx={{ marginTop: { xs: "50px" } }}>
         <Container sx={{ display: "flex", justifyContent: "center" }}>
           <Box
             borderRadius={"30px"}
