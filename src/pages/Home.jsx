@@ -31,7 +31,7 @@ const Home = () => {
                   safety, efficiency,
                   and meticulous deconstruction."
         />
-        <link rel="canonical" href="/" />
+        <link rel="canonical" href="https://dsdemo.ae/" />
       </Helmet>
       <Box>
         {/* <HeroSwiper /> */}

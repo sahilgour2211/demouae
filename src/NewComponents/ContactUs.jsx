@@ -97,7 +97,7 @@ const ContactUs = () => {
   return (
     <>
       <Helmet>
-        <title>Contact</title>
+        <title>Dsdemo | Contact Us Now</title>
         <meta
           name="description"
           content="Contact us for dismantling, removal, and
@@ -105,7 +105,7 @@ const ContactUs = () => {
                   safety, efficiency,
                   and meticulous deconstruction."
         />
-        <link rel="canonical" href="/contact" />
+        <link rel="canonical" href="https://dsdemo.ae/contact" />
       </Helmet>
       <Box position={"relative"}>
         {/* Contact Details Section */}
@@ -117,7 +117,8 @@ const ContactUs = () => {
               py: 4,
               position: "absolute",
               width: "90%",
-              top: { xs: "10%", sm: "18%" },
+              top: { xs: "10%", sm: "18%", lg: "20%" },
+              left: { sm: "4%", lg: "6%" },
             }}
           >
             <Container>
